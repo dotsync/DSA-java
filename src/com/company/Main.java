@@ -1,19 +1,16 @@
 package com.company;
 
+import com.company.LinkedList.CustomSinglyLinkedList;
 import com.company.LinkedList.CustomSinglyLinkedListNode;
 
 public class Main {
 
     public static void main(String[] args) {
-        CustomSinglyLinkedListNode head = new CustomSinglyLinkedListNode(1);
-        System.out.println(head.getDataNum()); // 1
-        System.out.println(head.getNextNode()); // null
-
-        head.setNextNode(new CustomSinglyLinkedListNode(2));
-        System.out.println(head.getNextNode().getDataNum()); // 2
-
-        System.out.println(head.getNextNode().getNextNode()); // null
-        head.getNextNode().setNextNode(new CustomSinglyLinkedListNode("Accepts Strings too!"));
-        System.out.println(head.getNextNode().getNextNode().getDataString()); // "Accepts Strings too!"
+        CustomSinglyLinkedList ll = new CustomSinglyLinkedList();
+        ll.addToHead(3);
+        ll.print(); // 3
+        ll.addToHead(2);
+        ll.addToHead(1);
+        ll.print(); // head -> 1 2 3
     }
 }
