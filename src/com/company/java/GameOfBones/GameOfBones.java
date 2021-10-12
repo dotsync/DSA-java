@@ -1,4 +1,4 @@
-package com.company.GameOfBones;
+package com.company.java.GameOfBones;
 
 import java.util.List;
 import java.util.stream.Collectors;

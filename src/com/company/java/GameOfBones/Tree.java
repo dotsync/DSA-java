@@ -1,4 +1,4 @@
-package com.company.GameOfBones;
+package com.company.java.GameOfBones;
 
 import lombok.Data;
 
