@@ -7,17 +7,17 @@ public class MiniMax {
 
     public void constructTree(int noOfBones) {
         tree = new Tree();
-        Node root = new Node(noOfBones, true);
+        GOBNode root = new GOBNode(noOfBones, true);
         tree.setRoot(root);
         constructTree(root);
     }
-    private void constructTree(Node parentNode) {
+    private void constructTree(GOBNode parentNode) {
         // create list of possible heaps
         List<Integer> listOfPossibleHeaps
                 = GameOfBones.getPossibleStates(parentNode.getBones());
         boolean isChildMaxPlayer = !parentNode.isMaxPlayer();
         listOfPossibleHeaps.forEach(n -> {
-            Node newNode = new Node(n, isChildMaxPlayer);
+            GOBNode newNode = new GOBNode(n, isChildMaxPlayer);
             parentNode.addChild(newNode);
             if (newNode.getBones() > 0) {
                 constructTree(newNode);

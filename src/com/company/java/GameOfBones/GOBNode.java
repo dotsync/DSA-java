@@ -4,24 +4,24 @@ import lombok.Data;
 
 import java.util.List;
 
-public @Data class Node {
+public @Data class GOBNode {
     int bones;
     boolean isMaxPlayer;
     int score;
-    List<Node> children;
+    List<GOBNode> children;
 
-    public Node(int bones, boolean isMaxPlayer, int score, List<Node> children) {
+    public GOBNode(int bones, boolean isMaxPlayer, int score, List<GOBNode> children) {
         this.bones = bones;
         this.isMaxPlayer = isMaxPlayer;
         this.score = score;
         this.children = children;
     }
 
-    public Node(int noOfBones, boolean isMaxPlayer) {
+    public GOBNode(int noOfBones, boolean isMaxPlayer) {
         bones = noOfBones;
         this.isMaxPlayer = isMaxPlayer;
     }
-    public void addChild(Node newNode) {
+    public void addChild(GOBNode newNode) {
         this.children.add(newNode);
     }
 }

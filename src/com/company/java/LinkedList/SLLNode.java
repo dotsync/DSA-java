@@ -2,12 +2,12 @@ package com.company.java.LinkedList;
 
 import lombok.Data;
 
-public @Data class Node {
+public @Data class SLLNode {
     private String data;
-    private Node next;
+    private SLLNode next;
 
     // constructor
-    public Node(String data) {
+    public SLLNode(String data) {
         this.data = data;
         this.next = null;
    }

@@ -2,14 +2,14 @@ package com.company.java.LinkedList;
 
 public class SinglyLinkedList {
     // properties
-    private Node head;
+    public SLLNode head;
 
     public SinglyLinkedList() {
         head = null;
     }
 
     public void addToHead(String data) {
-        Node newHead = new Node(data);
+        SLLNode newHead = new SLLNode(data);
         if (head != null) {
             newHead.setNext(head);
         }
@@ -17,19 +17,19 @@ public class SinglyLinkedList {
     }
 
     public void addToTail(String data) {
-        Node tail = head;
+        SLLNode tail = head;
         if (tail == null) {
-            head = new Node(data);
+            head = new SLLNode(data);
         } else {
             while (tail.getNext() != null) {
                 tail = tail.getNext();
             }
-            tail.setNext(new Node(data));
+            tail.setNext(new SLLNode(data));
         }
     }
 
     public String removeHead() {
-        Node removedHead = head;
+        SLLNode removedHead = head;
         if (removedHead != null) {
             head = removedHead.getNext();
             return removedHead.getData();
@@ -41,7 +41,7 @@ public class SinglyLinkedList {
     // print
     public String printList() {
         String output = "<head> ";
-        Node currentNode = head;
+        SLLNode currentNode = head;
         while (currentNode != null) {
             output += currentNode.getData() + " ";
             currentNode = currentNode.getNext();
